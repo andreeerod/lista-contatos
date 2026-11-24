@@ -12,6 +12,12 @@ export const Card = styled.li`
   border: 1px solid ${cores.borda};
   border-radius: 14px;
   padding: 18px 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: #f6d3cc;
+    box-shadow: 0 8px 24px rgba(225, 29, 46, 0.06);
+  }
 
   @media (max-width: 600px) {
     grid-template-columns: auto 1fr;
@@ -26,8 +32,8 @@ export const Avatar = styled.span`
   place-items: center;
   font-family: ${fontes.titulo};
   font-weight: 700;
-  color: ${cores.principal};
-  background-color: rgba(91, 61, 245, 0.1);
+  color: #fff;
+  background: linear-gradient(135deg, ${cores.principal}, ${cores.laranja});
 `
 
 export const Info = styled.div`

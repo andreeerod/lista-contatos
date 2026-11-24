@@ -1,19 +1,21 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  fundo: '#f4f1ec',
+  fundo: '#ffffff',
+  campo: '#fafafa',
   card: '#ffffff',
-  texto: '#1d1b26',
-  suave: '#6e6a78',
-  borda: '#e4dfd6',
-  principal: '#5b3df5',
-  principalEscura: '#4329cc',
-  perigo: '#e0413a'
+  texto: '#1a1414',
+  suave: '#736868',
+  borda: '#efe9e7',
+  principal: '#e11d2e',
+  principalEscura: '#b3121f',
+  laranja: '#f97316',
+  perigo: '#ea580c'
 }
 
 export const fontes = {
-  titulo: 'Outfit, sans-serif',
-  texto: 'Inter, sans-serif'
+  titulo: "'Space Grotesk', sans-serif",
+  texto: "'DM Sans', sans-serif"
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -43,6 +45,15 @@ export const Container = styled.main`
 
 export const Titulo = styled.h1`
   font-family: ${fontes.titulo};
+  letter-spacing: -1px;
+
+  span {
+    background: linear-gradient(90deg, ${cores.principal}, ${cores.laranja});
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   font-size: 40px;
   line-height: 1.1;
   margin-bottom: 8px;
@@ -59,14 +70,14 @@ export const Campo = styled.input`
   padding: 0 14px;
   border: 1px solid ${cores.borda};
   border-radius: 10px;
-  background-color: ${cores.fundo};
+  background-color: ${cores.campo};
   color: ${cores.texto};
   transition: border-color 0.2s, box-shadow 0.2s;
 
   &:focus {
     outline: none;
     border-color: ${cores.principal};
-    box-shadow: 0 0 0 3px rgba(91, 61, 245, 0.18);
+    box-shadow: 0 0 0 3px rgba(225, 29, 46, 0.15);
   }
 `
 
@@ -93,7 +104,7 @@ export const Botao = styled.button<{ $variante?: 'primario' | 'secundario' | 'pe
   }
 
   &:focus-visible {
-    outline: 3px solid rgba(91, 61, 245, 0.35);
+    outline: 3px solid rgba(249, 115, 22, 0.45);
     outline-offset: 2px;
   }
 `

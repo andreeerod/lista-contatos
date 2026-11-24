@@ -26,7 +26,9 @@ function App() {
     <>
       <GlobalStyle />
       <Container>
-        <Titulo>Contatos</Titulo>
+        <Titulo>
+          Meus <span>contatos</span>
+        </Titulo>
         <Subtitulo>
           {contatos.length === 1 ? '1 contato salvo' : `${contatos.length} contatos salvos`}
         </Subtitulo>

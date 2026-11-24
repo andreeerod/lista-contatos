@@ -5,8 +5,10 @@ import { cores, fontes } from '../../styles'
 export const Form = styled.form`
   background-color: ${cores.card};
   border: 1px solid ${cores.borda};
+  border-top: 4px solid ${cores.principal};
   border-radius: 16px;
   padding: 24px;
+  box-shadow: 0 10px 30px rgba(26, 20, 20, 0.05);
   margin-bottom: 32px;
   display: grid;
   gap: 14px;

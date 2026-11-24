@@ -49,7 +49,7 @@ const Contato = ({ contato }: { contato: ContatoType }) => {
           <Campo aria-label="Nome completo" value={nome} onChange={(e) => setNome(e.target.value)} />
           <Campo aria-label="E-mail" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <Campo aria-label="Telefone" type="tel" value={telefone} onChange={(e) => setTelefone(e.target.value)} />
-          {erro && <p role="alert" style={{ color: '#e0413a', fontSize: 13 }}>{erro}</p>}
+          {erro && <p role="alert" style={{ color: '#ea580c', fontSize: 13 }}>{erro}</p>}
           <S.Acoes>
             <Botao type="submit">Salvar</Botao>
             <Botao type="button" $variante="secundario" onClick={cancelar}>
